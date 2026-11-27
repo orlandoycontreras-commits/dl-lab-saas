@@ -244,19 +244,43 @@ export default function FilmRoom({ isProUser }) {
           position: "relative",
           width: "100%",
           aspectRatio: "16 / 9",
-          background: "#111",
+          background: "#181818",
+          border: "1px dashed #333",
+          borderRadius: "8px",
           marginTop: "8px",
           overflow: "hidden",
           touchAction: "none",
         }}
       >
-        {videoUrl && (
+        {videoUrl ? (
           <video
             ref={videoRef}
             src={videoUrl}
             controls
             style={{ width: "100%", height: "100%", objectFit: "contain" }}
           />
+        ) : (
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              color: "#777",
+              textAlign: "center",
+              padding: "16px",
+              pointerEvents: "none",
+            }}
+          >
+            <strong style={{ color: "#bbb", marginBottom: "4px" }}>
+              Carga un video de entrenamiento o jugada
+            </strong>
+            <span style={{ fontSize: "13px" }}>
+              También puedes dibujar trazos libremente sobre este pizarrón ahora mismo.
+            </span>
+          </div>
         )}
 
         <canvas

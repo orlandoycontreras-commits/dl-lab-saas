@@ -10,7 +10,8 @@ export const dlDrillsData = [
       "Primer paso corto y explosivo hacia adelante, nunca hacia arriba",
       "Mantener cadera baja y espalda plana en los primeros dos pasos"
     ],
-    videoUrl: ""
+    videoUrl: "",
+    posterUrl: ""
   },
   {
     id: "hip-bend-cones",
@@ -23,7 +24,8 @@ export const dlDrillsData = [
       "Bajar el nivel de cadera pasando por debajo del plano de bloqueo",
       "Acelerar al salir de la curva en lugar de frenar para girar"
     ],
-    videoUrl: ""
+    videoUrl: "",
+    posterUrl: ""
   },
   {
     id: "hand-combat-bag",
