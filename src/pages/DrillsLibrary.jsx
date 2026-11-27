@@ -65,16 +65,27 @@ export default function DrillsLibrary({ isProUser }) {
                   </ul>
 
                   {drill.videoUrl ? (
-                    <video
-                      src={drill.videoUrl}
-                      controls
-                      style={{ width: "100%", marginTop: "10px", borderRadius: "6px" }}
-                    />
-                  ) : (
-                    <p style={{ fontSize: "12px", color: "#888", marginTop: "10px", marginBottom: 0 }}>
-                      Video demostrativo pendiente de cargar en <code>videoUrl</code>.
-                    </p>
-                  )}
+  <video
+    src={drill.videoUrl}
+    controls
+    preload="metadata"
+    style={{
+      width: "100%",
+      maxWidth: "420px",
+      maxHeight: "235px",
+      objectFit: "contain",
+      display: "block",
+      marginTop: "10px",
+      borderRadius: "6px",
+      background: "#0d0d0d",
+      border: "1px solid #2a2a2a",
+    }}
+  />
+) : (
+  <p style={{ fontSize: "12px", color: "#888", marginTop: "10px", marginBottom: 0 }}>
+    Video demostrativo pendiente de cargar en <code>videoUrl</code>.
+  </p>
+)}
                 </>
               )}
             </div>
